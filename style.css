@@ -245,7 +245,7 @@ body {
   background-color: var(--cor-amarelo-ouro);
   border-radius: 4px;
   margin: 0 auto 10px;
-  transform: translateX(-17.5vw);
+  transform: translateX(-18vw);
 }
 
 #ContentBox2 h2 {
@@ -553,7 +553,7 @@ body {
 }
 
 #contatoBar i {
-  color: var(--cor-azul-claro);
+  color: var(--cor-preta);
   background-color: var(--cor-branca);
   border-radius: 50%;
   display: inline-flex;
@@ -613,6 +613,7 @@ body {
   background-color: var(--cor-azul-claro);
   margin-top: 20px;
 }
+
 #socialFooter i:hover {
   color: var(--cor-amarelo-ouro);
 }
@@ -628,11 +629,64 @@ body {
   color: var(--cor-amarelo-ouro);
 }
 
-@media (max-width: 768px) {
+#menuBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-branca);
+  font-size: 28px;
+  position: absolute;
+  left: 10px;
+  margin-top: 10px;
+  
+}
 
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--cor-azul-medio);
+  padding: 20px;
+  transition: 0.3s;
+}
+
+#sidebar a {
+  display: block;
+  color: var(--cor-branca);
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+#sidebar #closeBtn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--cor-branca);
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#sidebar.open {
+  left: 0;
+}
+
+@media (min-width: 769px) {
+  #menuBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
   #navBar {
     flex-direction: column;
     align-items: center;
+  }
+
+  #navBarOptions {
+    display: none !important;
   }
 
   #Section1,
@@ -651,6 +705,21 @@ body {
   .planoBox {
     max-width: 100%;
     text-align: center;
+  }
+
+  #Banner1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #Banner1 h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-left: 0;
+    max-width: 80%;
   }
 
   #yellowBtn,
@@ -705,8 +774,19 @@ body {
     margin-top: 20px;
   }
 
-  .menuFooter{
+  .menuFooter {
     margin-top: 40px;
   }
-}
 
+  #navBarOptions {
+    display: none;
+  }
+
+  #ContentBox2 h2::before {
+    transform: translateX(-14vw);
+  }
+
+  #ContentBox3 h2::before {
+    transform: translateX(-17vw);
+  }
+}

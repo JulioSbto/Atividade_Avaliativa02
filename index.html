@@ -6,8 +6,10 @@
     <title>RL NET</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"/>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css"/>
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css"/>
+
 </head>
 
 <body>
@@ -27,6 +29,9 @@
         </header>
 
         <div id="navBar">
+            <button id="menuBtn">
+                <i class="fi fi-br-menu-burger"></i>
+            </button>
             <img src="/imagens/logo-white.png" alt="Logo RL NET" id="logo" />
             <nav id="navBarOptions">
                 <a href="#">Sobre</a>
@@ -34,10 +39,22 @@
                 <a href="#">Atendimento</a>
                 <a href="#">Mais<i class="fi fi-rr-angle-small-down"></i></a>
                 <button id="yellowBtn">
-                <i class="fi fi-rr-user"></i> Área do Cliente
+                    <i class="fi fi-rr-user"></i> Área do Cliente
                 </button>
             </nav>
         </div>
+        
+        <div id="sidebar">
+            <button id="closeBtn">✖</button>
+            <a href="#">Sobre</a>
+            <a href="#">Planos</a>
+            <a href="#">Atendimento</a>
+            <a href="#">Mais</a>
+            <button id="yellowBtn">
+                <i class="fi fi-rr-user"></i> Área do Cliente
+            </button>
+        </div>
+        
         
         <h1><span>Você</span> sempre <br> conectado!</h1>
 
@@ -253,5 +270,8 @@
         © 2025 - RL NET - Todos os Direitos Reservados | <a href="#">Política de Privacidade</a>
       </div>
     </footer>
+
+    <script src="script.js"></script>
+    
   </body>
 </html>
