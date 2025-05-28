@@ -61,7 +61,7 @@ body {
   display: inline-flex;
   align-items: center;
   color: var(--cor-branca);
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s;
   text-decoration: none;
 }
@@ -93,10 +93,13 @@ body {
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
 #yellowBtn:hover {
   background-color: #d69b0f;
+  transform: scale(1.1);
 }
 
 #yellowBtn i {
@@ -158,7 +161,7 @@ body {
   padding: 60px 10%;
   background-color: transparent;
   flex-wrap: wrap;
-  margin-top: -28vh;
+  margin-top: -27vh;
 }
 
 .ContentBox1 {
@@ -172,7 +175,8 @@ body {
 
 .ContentBox1 img {
   width: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .ContentBox1 h3 {
@@ -191,7 +195,6 @@ body {
   width: 20px;
   height: auto;
   position: relative;
-  top: 8px;
 }
 
 .LearnMore {
@@ -234,6 +237,16 @@ body {
 #ContentBox2 p {
   margin-bottom: 20px;
 }
+#ContentBox2 h2::before {
+  content: "";
+  display: block;
+  width: 10vh;
+  height: 8px;
+  background-color: var(--cor-amarelo-ouro);
+  border-radius: 4px;
+  margin: 0 auto 10px;
+  transform: translateX(-17.5vw);
+}
 
 #ContentBox2 h2 {
   font-size: 28px;
@@ -256,9 +269,19 @@ body {
   text-align: center;
 }
 
+#Section3 h2::before {
+  content: "";
+  display: block;
+  width: 10vh;
+  height: 8px;
+  background-color: var(--cor-azul-claro);
+  border-radius: 4px;
+  margin: 0 auto 10px;
+}
+
 #Section3 h2 {
   font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   font-weight: 400;
 }
 
@@ -323,6 +346,8 @@ body {
   color: var(--cor-preta);
   margin-bottom: 15px;
   font-weight: 400;
+  justify-content: center;
+  text-align: center;
 }
 
 .planoBox .preco strong {
@@ -397,6 +422,11 @@ body {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.planoBox.destaque #yellowBtn:hover {
+  transform: scale(1.1) translateX(-45%);
 }
 
 .planoBox #blueBtn {
@@ -415,8 +445,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.planoBox #blueBtn:hover {
+  transform: scale(1.1) translateX(-45%);
 }
 
 #Section4 {
@@ -437,6 +470,17 @@ body {
 
 #ContentBox3 {
   max-width: 45%;
+}
+
+#ContentBox3 h2::before {
+  content: "";
+  display: block;
+  width: 10vh;
+  height: 8px;
+  background-color: var(--cor-azul-claro);
+  border-radius: 4px;
+  margin: 0 auto 10px;
+  transform: translateX(-15.5vw);
 }
 
 #ContentBox3 h2 {
@@ -463,35 +507,67 @@ body {
   cursor: pointer;
   transition: 0.3s;
   margin-top: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 #blueBtn:hover {
   background-color: var(--cor-azul-medio);
+  transform: scale(1.1);
 }
 
-.contatoBar {
+#Section5 {
+  background-color: var(--cor-branca);
+  padding: 40px;
   display: flex;
-  justify-content: space-around;
-  padding: 20px 10%;
+  justify-content: center;
+}
+
+#contatoBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
   background-color: var(--cor-azul-claro);
   color: var(--cor-branca);
-  flex-wrap: wrap;
+  border-radius: 20px;
+  width: 100%;
+  gap: 20px;
 }
 
-.contatoBar i {
-  color: var(--cor-preta);
-  background-color: var(--cor-branca);
-  border-radius: 25%;
-  display: inline-flex;
-  padding: 10px;
-  border-radius: 100%;
-}
-
-.contatoBar div {
+.contatoItem {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 15px;
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+}
+
+.contatoItem:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#contatoBar i {
+  color: var(--cor-azul-claro);
+  background-color: var(--cor-branca);
+  border-radius: 50%;
+  display: inline-flex;
+  padding: 12px;
+  font-size: 20px;
+}
+
+.textos {
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.textos span {
+  font-weight: bold;
 }
 
 #Footer {
@@ -505,6 +581,8 @@ body {
   justify-content: space-between;
   padding: 0 10% 30px;
   flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #FooterContent img {
@@ -549,3 +627,86 @@ body {
 #copyright a {
   color: var(--cor-amarelo-ouro);
 }
+
+@media (max-width: 768px) {
+
+  #navBar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #Section1,
+  #Section2,
+  #Section3,
+  #Section4,
+  #Section5 {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5%;
+  }
+
+  .ContentBox1,
+  #ContentBox2,
+  #ContentBox3,
+  .planoBox {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #yellowBtn,
+  #blueBtn {
+    width: auto;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  #ContentBox2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ContentBox2 button {
+    align-self: center;
+  }
+
+  #ContentBox3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ContentBox3 button {
+    align-self: center;
+  }
+
+  #Section2 img,
+  #mapaCobertura img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  #contatoBar {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .contatoItem {
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .contatoItem::after {
+    display: none;
+  }
+
+  .planoBox {
+    margin-top: 20px;
+  }
+
+  .menuFooter{
+    margin-top: 40px;
+  }
+}
+
